@@ -2,7 +2,7 @@
 
 <!--- Syntax summary in https://www.markdownguide.org/basic-syntax/ -->
 
-This script parses XML files from [LATTES](https://lattes.cnpq.br/>LATTES) curriculum plataform -- \
+This script parses XML files from [LATTES](https://lattes.cnpq.br/) curriculum plataform -- \
 Federal Government of Brazil -- to compile bibliographic production.
 
 It will output the file **compiled_lattes.xlsx** containing unique entries for scientific articles, \
