@@ -2,8 +2,8 @@
 
 <!--- Syntax summary in https://www.markdownguide.org/basic-syntax/ -->
 
-This script parses XML files from <a href="https://lattes.cnpq.br/>LATTES</a> curriculum plataform -- \
-Federal Government of Brazil -- to compile bibliografic production.
+This script parses XML files from [LATTES](https://lattes.cnpq.br/>LATTES) curriculum plataform -- \
+Federal Government of Brazil -- to compile bibliographic production.
 
 It will output the file **compiled_lattes.xlsx** containing unique entries for scientific articles, \
 books, and chapters for the last 5 years.
