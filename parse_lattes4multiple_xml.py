@@ -303,10 +303,18 @@ def main(lattes_list):
                 # sorting and removing duplicates
                 compiled_articles_pd.sort_values('year', inplace=True)
                 compiled_articles_pd.drop_duplicates(subset='title', inplace=True)
-                compiled_books_pd.sort_values('year', inplace=True)
-                compiled_books_pd.drop_duplicates(subset='title', inplace=True)
-                compiled_chapters_pd.sort_values('year', inplace=True)
-                compiled_chapters_pd.drop_duplicates(subset='title_book', inplace=True)
+                try:
+                    compiled_books_pd.sort_values("year", inplace=True)
+                    compiled_books_pd.drop_duplicates(subset="title", inplace=True)
+                except KeyError:
+                    pass
+                try:
+                    compiled_chapters_pd.sort_values("year", inplace=True)
+                    compiled_chapters_pd.drop_duplicates(
+                        subset="title_book", inplace=True
+                    )
+                except KeyError:
+                    pass
                 with pd.ExcelWriter(xlsx_file, engine='xlsxwriter') as lattes:
                     compiled_articles_pd.to_excel(lattes, sheet_name='articles', index=False)
                     compiled_books_pd.to_excel(lattes, sheet_name='books', index=False)
